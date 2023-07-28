@@ -53,9 +53,11 @@ To start the Gradio application, use the following command:
 
 ```bash
 python3 app.py
+```
 
 This command will start a local server that hosts the application. You can then access the app by visiting http://localhost:7860/ in your web browser.
 
 ## UI Preview
+
 <img width="1434" alt="image" src="https://github.com/SamratThapa120/gradio-ASL-fingerspelling-recognition/assets/38401989/a0fa90c0-1530-43f2-a604-51b1d3b510a2">
 

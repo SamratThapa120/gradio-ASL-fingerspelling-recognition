@@ -32,6 +32,8 @@ class InferenceModule:
         output = self.prediction_fn(inputs=np.random.rand(100,543,3).astype(np.float32))
         print("successfully setup model for inference")
     def __call__(self,video_path):
+        if not video_path:
+            return "Prediction: NaN"
         video = cv2.VideoCapture(video_path)
         fps = video.get(cv2.CAP_PROP_FPS) # Get the frames per second of the video
         all_landmarks = []
@@ -90,16 +92,28 @@ class InferenceModule:
             print("predicted text is: ",text)
         return f"prediction: {text}"
 
+
 infer = InferenceModule(debug=True)
 
 
-demo = gr.Interface(
+webcam = gr.Interface(
     fn=infer, 
-    inputs=gr.Video(source="webcam", label="camera"), 
+    inputs=[gr.Video(source="webcam", label="Webcam",format="mp4",optional=True)], 
     outputs= "text", 
     live=False,
     enable_queue=True,
     title="American Sign Language Fingerspelling Prediction from Video")
+
+upload = gr.Interface(
+    fn=infer, 
+    inputs=[gr.Video(source="upload", label="Upload",format="mp4",optional=True)], 
+    outputs= "text", 
+    live=False,
+    enable_queue=True,
+    title="American Sign Language Fingerspelling Prediction from Video")
+
+demo = gr.TabbedInterface([webcam, upload], ["webcam-input", "upload-video"])
+
 demo.queue(concurrency_count=2)
 demo.launch()
 

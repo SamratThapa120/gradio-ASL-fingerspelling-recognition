@@ -2,7 +2,7 @@
 
 This code is for a kaggle compeition for American Sign Language fingerspelling recognition. Refer to the [competition page](https://www.kaggle.com/competitions/asl-fingerspelling?rvi=1) for more information about the competition.
 
-This repository contains the code to perform american sign language fingerspelling recognition on input from your Webcam (with a Gradio interface). 
+This repository contains the code to perform american sign language fingerspelling recognition on input from your Webcam or by uploading a video(with a Gradio interface). 
 
 
 ## Table of Contents
@@ -59,5 +59,6 @@ This command will start a local server that hosts the application. You can then 
 
 ## UI Preview
 
-<img width="1434" alt="image" src="https://github.com/SamratThapa120/gradio-ASL-fingerspelling-recognition/assets/38401989/a0fa90c0-1530-43f2-a604-51b1d3b510a2">
+<img width="1333" alt="image" src="https://github.com/SamratThapa120/gradio-ASL-fingerspelling-recognition/assets/38401989/70932eb0-0b3a-49d5-aa3a-acf7b7453c5b">
+
 

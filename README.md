@@ -59,6 +59,7 @@ This command will start a local server that hosts the application. You can then 
 
 ## UI Preview
 
-<img width="1333" alt="image" src="https://github.com/SamratThapa120/gradio-ASL-fingerspelling-recognition/assets/38401989/70932eb0-0b3a-49d5-aa3a-acf7b7453c5b">
+![github](https://github.com/SamratThapa120/gradio-ASL-fingerspelling-recognition/assets/38401989/bfbed9fb-0084-480f-af6a-76505889af55)
+
 
 
